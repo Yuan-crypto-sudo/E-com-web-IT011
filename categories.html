@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width"=device-width, initial-scale="1.0">
+
+        <title>Browse Games | GAMEVERSE</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--Navigation bar-->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="icon.png" alt="GAMEVERSE icon" class="navbar-icon">
+                <div class="navbar-logo">GAMEVERSE</div>
+            </div>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html" class="active">Games</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="#">Your Cart</a></li>
+            </ul>
+
+            <div class="navbar-right">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    alt="User"
+                    class="user-icon"
+                >
+                <a href="login.html" class="login-btn">Log in</a>
+            </div>
+        </nav>
+
+        <!-- Game catalog -->
+         <main class="catalog-page">
+
+            <header class="catalog-header">
+                <p class="catalog-eyebrow">DISCOVER YOUR NEXT GAME</p>
+                <h1>Browse Games</h1>
+                <p>Explore games, discover new favorites, and find your next adventure</p>
+            </header>
+
+            <!-- Search and sorting controls -->
+            <section class="catalog-toolbar">
+                <input
+                    type="search"
+                    id="game-search"
+                    placeholder="Search Games..."
+                    aria-label="Search games"
+                >
+
+                <select id="sort-games" aria-label="Sort games">
+                    <option value="featured">Featured</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+            </section>
+
+            <!-- Sidebar and game results -->
+             <div class="catalog-layout">
+                
+                <aside class="filter-sidebar">
+                    <h2>Browse by tag</h2>
+
+                    <p class="filter-description">
+                        Select a tag to explore different types of games.
+                    </p>
+
+                    <ul class="tag-list" id="tag-list">
+                        <li>
+                            <button type="button" class="tag-button active"
+                            data-tag="All">All Games</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Indie">Indie</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Action">Action</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Adventure">Adventure</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Casual">Casual</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="RPG">RPG</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Simulation">Simulation</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Strategy">Strategy</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Multiplayer">Multiplayer</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tag-button"
+                            data-tag="Horror">Horror</button>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Javascript matching game cards -->
+                 <section class="catalog-results">
+                    <div class="results-heading">
+                        <h2 id="selected-tag-title">All Games</h2>
+                        <p id="results-count">Loading games...</p>
+                    </div>
+
+                    <div class="catalog-game-grid" id="game-grid">
+                        <!-- Game cards generated by JS -->
+                    </div>
+
+                    <p id="no-results" hidden>
+                        No games found. Try another search or category.
+                    </p>
+                 </section>
+             </div>
+         </main>
+
+         <script src="categories.js"></script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050737;
+    color: white;
+}
+
+.container {
+    width: 450px;
+    padding: 35px;
+}
+
+.form-box {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+form > label {
+    display: block;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    background: #070a42;
+    border: 1px solid #4b4e6e;
+    border-radius: 9px;
+}
+
+.input-box:focus-within {
+    border-color: #ff0f7b;
+    box-shadow: 0 0 8px rgba(255, 15, 123, 0.3);
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+}
+
+.input-box input::placeholder {
+    color: #c6c6c6;
+}
+
+.icon {
+    color: #ff0f7b;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.show-password {
+    border: none;
+    background: transparent;
+    color: #ff0f7b;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.show-password:hover {
+    color: white;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 25px;
+    font-size: 14px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.options a {
+    color: #ff0f7b;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    accent-color: #ff0f7b;
+    cursor: pointer;
+}
+
+.main-button {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 9px;
+    background: #ff0f7b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background: #e90b6e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 15, 123, 0.3);
+}
+
+.switch {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+}
+
+.switch a {
+    color: #ff0f7b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 20px 0 25px;
+    color: #aaa;
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 100%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .input-box {
+        height: 58px;
+    }
+}
